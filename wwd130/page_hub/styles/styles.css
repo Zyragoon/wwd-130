@@ -1,0 +1,178 @@
+:root {
+	/* side padding shared variable so both content and image can use the same value */
+	--side-pad: 2rem;
+}
+
+body {
+		background-color: #040403; /* side margins color */
+		font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+		min-height: 100vh;
+}
+
+.page {
+	width: 100%;
+	box-sizing: border-box;
+	/* keep page background same as body so gutters appear visually as part of the page */
+}
+
+.content {
+	background: #FFE8D1; /* main content background (softer color) */
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: var(--side-pad);
+	min-height: 100vh;
+	box-sizing: border-box;
+	color: #040403; /* ensure text contrasts nicely against the soft background */
+}
+
+
+/* place the Zyra MC skin image fixed to the left side of the viewport */
+.zyra_skin {
+	position: fixed;
+	left: 4rem;
+	top: 0;
+	height: 100vh;
+	width: var(--side-pad);
+	z-index: 0;
+	pointer-events: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.zyra_skin img {
+	height: 100%;
+	width: auto;
+	display: block;
+	object-fit: cover;
+	filter: none;
+}
+
+/* place the Black Ace image fixed to the right side of the viewport */
+.black_ace {
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	/* make the image area the same width as the content side padding */
+	width: var(--side-pad);
+	z-index: 0; /* sit behind content */
+	pointer-events: none; /* don't block clicks */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+.black_ace img {
+	height: 100%;
+	width: auto;
+	display: block;
+	object-fit: cover; /* fill the container by height and crop horizontally if needed */
+	filter: none;
+}
+
+/* ensure content sits above the fixed image */
+.content {
+	position: relative;
+	z-index: 1;
+}
+
+/* header/logo */
+.site-header {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 1rem;
+}
+.site-logo {
+	width: 48px;
+	height: auto;
+	display: block;
+}
+.site-title {
+	margin: 0;
+	font-size: 1.25rem;
+}
+
+/* here are the colors i chose: #FFE8D1, #06D6A0, #7FD4F0, #AD2831, #040403 */
+
+/* folder grid */
+.folders-section {
+	padding: 2.5rem 0 3.5rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.folders-heading {
+	margin: 0 0 2rem 0;
+	font-size: 1.25rem;
+	letter-spacing: 0.5px;
+}
+.folder-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem 2.5rem;
+	align-items: stretch;
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+}
+.folder-item {
+	text-align: center;
+	border: 2px solid #040403;
+	border-radius: 14px;
+	padding: 2rem 1.5rem 1.5rem 1.5rem;
+	background-color: #7FD4F0;
+	box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: box-shadow 0.2s;
+}
+.folder-item:hover {
+	box-shadow: 0 4px 24px 0 rgba(0,0,0,0.12);
+}
+.folder-label {
+	font-weight: 700;
+	margin-bottom: 1rem;
+	outline: none;
+	font-size: 1.1rem;
+	letter-spacing: 0.2px;
+}
+.folder-label[contenteditable]:focus {
+	box-shadow: 0 0 0 3px rgba(6,214,160,0.12);
+}
+.folder-icon {
+  font-size: 3rem;
+  margin: 0 auto;
+  color: #F4C542;
+  transition: transform 160ms ease, filter 160ms ease;
+  cursor: pointer;
+}
+.folder-icon:hover,
+.folder-icon:focus {
+  transform: translateY(-4px);
+  filter: brightness(1.02);
+}
+.folder-icon:hover::before,
+.folder-icon:focus::before {
+  content: "\f07c"; /* fa-folder-open */
+}/* make icons responsive on smaller screens */
+@media (max-width: 560px) {
+	.folder-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.folder-icon {
+		width: 80px;
+		height: 60px;
+	}
+}
+
+@media (max-width: 360px) {
+	.folder-grid {
+		grid-template-columns: 1fr;
+	}
+}

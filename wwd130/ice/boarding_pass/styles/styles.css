@@ -1,0 +1,60 @@
+body{
+    
+    background-color: #cfcfcf;
+
+}
+
+.departureinfo{
+    background-color: #001b36;
+    color:#213b56;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.departureinfo h4{
+    color: #6d91b6;
+    text-align: center;
+
+}
+
+.departureinfo h2{
+    color:white;
+    text-align: center;
+}
+.plane{
+    text-align: center;
+    margin-top: 15px;
+}
+
+#boardingpass{
+    max-width: 50%;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 19px;
+}
+header{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+   padding: 11px 35px 0 25px;
+}
+header.logo{
+    text-align: left;
+}
+
+header.name{
+    margin-top: 9px;
+}
+
+.gateinfo{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    padding: 15px 0 15px 0;
+    background-color: #f1f1f1;
+    
+}
+footer{
+    text-align: center;
+    padding: 15px 0 15px 0;
+}

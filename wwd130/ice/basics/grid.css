@@ -1,0 +1,52 @@
+div{
+    background-color: lightblue;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.first{
+    grid-column: 1/2;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+.Third{
+    grid-column: 1/-1;
+    background-color: purple;
+}
+
+.fourth{
+    grid-column: 6/ -1;
+    font-weight: bold;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+
+}
+
+
+.red{
+    background-color: red;
+    grid-column : 1/-1;
+}
+.yellow{
+    background-color: yellow;
+    grid-column: 1/-1;
+}
+.blue{
+    background-color: blue;
+    grid-column:  1/2;
+}
+.black{
+    background-color: black;
+    grid-column: 2/3;
+}

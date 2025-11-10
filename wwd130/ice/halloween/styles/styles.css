@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #ff6600;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../images/spooky-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-height: 100vh;
+}
+
+
+header {
+    padding: 20px 0;
+    border-bottom: 2px solid #ff6600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav li {
+    font-family: 'Creepster', cursive;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px #ff6600;
+}
+
+nav li:hover {
+    color: #ff0000;
+    transform: scale(1.1);
+    text-shadow: 0 0 20px #ff0000;
+}
+
+
+main {
+    padding: 40px 0;
+}
+
+h1 {
+    font-family: 'Nosifer', cursive;
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff0000;
+    text-shadow: 0 0 15px #ff0000,
+                 0 0 25px #ff6600;
+    animation: flicker 2s infinite;
+}
+
+h2 {
+    font-family: 'Creepster', cursive;
+    font-size: 2.5em;
+    color: #ff9900;
+    margin: 30px 0 15px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #cccccc;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 2px #000;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: 30px auto;
+    border: 3px solid #ff6600;
+    box-shadow: 0 0 20px #ff6600;
+}
+
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-left: 4px solid #ff6600;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateX(10px);
+    border-left-color: #ff0000;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #ff6600;
+    font-family: 'Creepster', cursive;
+    font-size: 1.2em;
+}
+
+
+@keyframes flicker {
+    0%, 100% {
+        text-shadow: 0 0 15px #ff0000,
+                     0 0 25px #ff6600;
+    }
+    50% {
+        text-shadow: 0 0 5px #ff0000,
+                     0 0 15px #ff6600;
+    }
+}

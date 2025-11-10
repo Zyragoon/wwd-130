@@ -1,0 +1,11 @@
+body{
+    background-color: rgba(220, 20, 160, 0.466);
+    color : white;
+    padding : 10px 10px;
+    border : 2px solid white;
+    margin: 50px;
+}
+p{
+    background-color: rgba(20, 160, 220, 0.466);
+    
+}

@@ -1,0 +1,5 @@
+
+Palette: https://coolors.co/ffe8d1-06d6a0-54c6eb-ad2831-040403
+Font: https://fonts.google.com/specimen/Nunito
+
+Logo: (will change the colors later)
