@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Zyra</title>
+    <!-- Match the font used across the page hub -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Colors taken from page_hub/styles/styles.css: 
+           #FFE8D1 (soft background), #06D6A0 (accent), #7FD4F0 (cards),
+           #AD2831 (deep red), #040403 (page background / text) */
+        :root{
+            --soft-bg: #FFE8D1;
+            --accent: #06D6A0;
+            --card: #7FD4F0;
+            --deep: #AD2831;
+            --page-bg: #040403;
+        }
+
+        body{ background: var(--page-bg); margin:0; font-family: 'Nunito', Arial, Helvetica, sans-serif; }
+
+        .page{
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+            box-sizing: border-box;
+            background: var(--soft-bg);
+            color: var(--page-bg);
+            border-radius: 8px;
+            min-height: 100vh;
+        }
+
+        .header{ text-align:center; margin-bottom:1.25rem; }
+        .header h1{ margin:0; font-size:1.8rem; color:var(--page-bg); }
+        .edit-hint{ color:var(--deep); margin-top:0.25rem; }
+
+        .photo-and-bio{ display:flex; gap:1.25rem; align-items:flex-start; flex-wrap:wrap; }
+        .photo{ flex:0 0 260px; }
+        .photo img{ width:100%; height:auto; display:block; border-radius:10px; border:4px solid var(--page-bg); box-shadow:0 8px 24px rgba(0,0,0,0.12); }
+
+        .bio{ flex:1 1 320px; min-width:220px; }
+        .bio p{ line-height:1.6; font-size:1.05rem; margin:0; }
+
+        a.back-link{ color:var(--accent); text-decoration:none; font-weight:600; }
+        a.back-link:hover{ text-decoration:underline; }
+
+        @media (max-width:700px){
+            .page{ padding:1rem; border-radius:0; }
+            .photo-and-bio{ flex-direction:column; align-items:center; }
+            .photo{ flex:0 0 auto; width:60%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h1>About Me</h1>
+            
+        </header>
+
+        <div class="photo-and-bio">
+            <div class="photo">
+                
+                <img src="/wwd130/page_hub/images/image0.jpg" alt="Hey thats me!">
+            </div>
+
+            <div class="bio">
+                <p id="about-text">Hi — I'm Zach. I'm learning web fundamentals and building projects while improving my layout and design skills. I've lived all over the southern United States, I'm a huge pokemon fan as well as just a nerd in general. </p>
+            </div>
+        </div>
+
+        <p style="margin-top:20px;"><a href="index.html">← Back to Hub</a></p>
+    </div>
+</body>
+</html>
